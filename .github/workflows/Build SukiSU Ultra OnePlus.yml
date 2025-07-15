@@ -627,7 +627,7 @@ jobs:
       - name: Add sched_ext
         if: ${{ github.event.inputs.SCHED == 'true' }}
         run: |
-          cd kernel_workspace/kernel_platform/
+          cd kernel_workspace/kernel_platform
           git clone https://github.com/HanKuCha/sched_ext.git
           cp -r ./sched_ext/* ./common/kernel/sched
           rm -rf ./sched_ext/.git
